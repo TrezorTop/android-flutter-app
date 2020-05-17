@@ -9,7 +9,7 @@ class TimeLinePage extends StatefulWidget {
 
 class _TimeLinePageState extends State<TimeLinePage> {
   @override
-  Widget build(context) {
+  Widget build(context){
     return Scaffold(
       appBar: header(context, isAppTitle: true),
       body: circularProgress(),
