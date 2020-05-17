@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "114022176696",
+    "firebase_url": "https://easystudy-baacf.firebaseio.com",
+    "project_id": "easystudy-baacf",
+    "storage_bucket": "easystudy-baacf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114022176696:android:02c189995531c861c5a14d",
+        "android_client_info": {
+          "package_name": "com.muhammadali.buddiesgram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114022176696-0d72n4ddg0ug7uestqlrul9nj1lp7cj9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.muhammadali.buddiesgram",
+            "certificate_hash": "b2f0744c3a945b0e71aa31355188ca027448cbfe"
+          }
+        },
+        {
+          "client_id": "114022176696-lqquivqp21e6tbc6b3sco5gh499puo29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF7mKEhSYALaCWPYcvfGH5Xv7QnBlOBSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114022176696-lqquivqp21e6tbc6b3sco5gh499puo29.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
