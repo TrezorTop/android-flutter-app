@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b36b5eb-d861-4cde-af70-e69ad812f66e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/buddies_gram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/buddies_gram.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/SearchPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/SearchPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/UploadPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/UploadPage.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +62,14 @@
       <option name="presentableId" value="Default" />
       <updated>1589573594075</updated>
     </task>
+    <task id="LOCAL-00001" summary="Search">
+      <created>1589799838970</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589799838970</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -77,5 +84,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search" />
   </component>
 </project>
