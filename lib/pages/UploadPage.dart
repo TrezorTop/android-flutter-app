@@ -1,10 +1,16 @@
 import 'dart:io';
 import 'package:buddiesgram/models/user.dart';
+import 'package:buddiesgram/pages/HomePage.dart';
+import 'package:buddiesgram/widgets/ProgressWidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:uuid/uuid.dart';
+import 'package:image/image.dart' as ImD;
 
 class UploadPage extends StatefulWidget {
   final User gCurrentUser;
@@ -16,11 +22,14 @@ class UploadPage extends StatefulWidget {
   _UploadPageState createState() => _UploadPageState();
 }
 
-class _UploadPageState extends State<UploadPage> {
 
+class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMixin<UploadPage>
+{
   File file;
-TextEditingController descriptionTextEditingController = TextEditingController();
-TextEditingController locationTextEditingController = TextEditingController();
+  bool uploading = false;
+  String postId = Uuid().v4();
+  TextEditingController descriptionTextEditingController = TextEditingController();
+  TextEditingController locationTextEditingController = TextEditingController();
 
 
   captureImageWithCamera() async {
@@ -83,7 +92,7 @@ TextEditingController locationTextEditingController = TextEditingController();
             padding: EdgeInsets.only(top: 20.0),
             child: RaisedButton(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9.0),),
-              child: Text("Upload Image, style", style: TextStyle(color: Colors.white, fontSize: 20.0),),
+              child: Text("Upload", style: TextStyle(color: Colors.white, fontSize: 20.0),),
               color: Colors.purple,
               onPressed: () => takeImage(context)
             ),
@@ -93,7 +102,11 @@ TextEditingController locationTextEditingController = TextEditingController();
     );
   }
 
-  removeImage(){
+  clearPostInfo()
+  {
+    locationTextEditingController.clear();
+    descriptionTextEditingController.clear();
+
     setState(() {
       file = null;
     });
@@ -108,23 +121,76 @@ TextEditingController locationTextEditingController = TextEditingController();
     String specificAddress = '${mPlaceMark.locality}, ${mPlaceMark.country}';
     locationTextEditingController.text = specificAddress;
   }
-  
-  
+
+  compressingPhoto() async {
+    final tDirectory = await getTemporaryDirectory();
+    final path = tDirectory.path;
+    ImD.Image mImageFile = ImD.decodeImage(file.readAsBytesSync());
+    final compressedImageFile = File('$path/img_$postId.jpg')..writeAsBytesSync(ImD.encodeJpg(mImageFile, quality: 90));
+    setState(() {
+      file = compressedImageFile;
+    });
+  }
+
+  controlUploadAndSave() async {
+    setState(() {
+      uploading = true;
+    });
+
+    await compressingPhoto();
+
+    String downloadUrl = await uploadPhoto(file);
+
+    savePostInfoToFireStorm(url: downloadUrl, location: locationTextEditingController.text, description: descriptionTextEditingController.text);
+
+    locationTextEditingController.clear();
+    descriptionTextEditingController.clear();
+
+    setState(() {
+      file = null;
+      uploading = false;
+      postId = Uuid().v4();
+    });
+  }
+
+
+  savePostInfoToFireStorm({String url, String location, String description})
+  {
+    postsReference.document(widget.gCurrentUser.id).collection("usersPosts").document(postId).setData({
+      "postId": postId,
+      "ownerId": widget.gCurrentUser.id,
+      "timestamp": timestamp,
+      "likes": {},
+      "username": widget.gCurrentUser.username,
+      "description": description,
+      "location": location,
+      "url": url,
+    });
+  }
+
+  Future<String> uploadPhoto(mImageFile) async {
+    StorageUploadTask mStorageUploadTask = storageReference.child("post_$postId.jpg").putFile(mImageFile);
+    StorageTaskSnapshot storageTaskSnapshot = await mStorageUploadTask.onComplete;
+    String downloadUrl = await storageTaskSnapshot.ref.getDownloadURL();
+    return downloadUrl;
+  }
+
   displayUploadFormScreen() {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        leading: IconButton(icon: Icon(Icons.arrow_back, color: Colors.white,), onPressed: removeImage),
+        leading: IconButton(icon: Icon(Icons.arrow_back, color: Colors.white,), onPressed: clearPostInfo),
         title: Text("New Post", style: TextStyle(fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.bold),),
         actions: <Widget>[
           FlatButton(
-            onPressed: () => print("tapped"),
-            child: Text("Share", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold, fontSize: 16.0),),
+            onPressed: uploading ? null : () => controlUploadAndSave(),
+            child: Text("Share", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16.0),),
           )
         ],
       ),
       body: ListView(
         children: <Widget>[
+          uploading ? linearProgress() : Text(""),
           Container(
             height: 230.0,
             width: MediaQuery.of(context).size.width * 0.8,
@@ -185,6 +251,9 @@ TextEditingController locationTextEditingController = TextEditingController();
       ),
     );
   }
+
+
+  bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
