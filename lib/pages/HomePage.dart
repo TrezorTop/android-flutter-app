@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
 //          TimeLinePage(),
           RaisedButton.icon(onPressed: logoutUser, icon: Icon(Icons.close), label: Text("Sign Out")),
           SearchPage(),
-          UploadPage(),
+          UploadPage(gCurrentUser: currentUser,),
           NotificationsPage(),
           ProfilePage(),
         ],

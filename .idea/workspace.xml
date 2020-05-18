@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0b36b5eb-d861-4cde-af70-e69ad812f66e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/HomePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/UploadPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/UploadPage.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589799838970</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавление фото">
+      <created>1589804147698</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589804147698</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,6 +95,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search" />
+    <MESSAGE value="Добавление фото" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление фото" />
   </component>
 </project>
