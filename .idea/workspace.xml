@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
@@ -23,9 +22,9 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/EditProfilePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/EditProfilePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/HomePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/SearchPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/SearchPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/UploadPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/UploadPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/ProfilePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/ProfilePage.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589810089210</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавление картинки в файр базу">
+      <created>1589838935925</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589838935926</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +135,7 @@
     <MESSAGE value="Search" />
     <MESSAGE value="Добавление фото" />
     <MESSAGE value="Добавить фото из Галереи и после создать с ним статью, написать типа описание к фото которое заливаешь и своё местоположение на фото" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавить фото из Галереи и после создать с ним статью, написать типа описание к фото которое заливаешь и своё местоположение на фото" />
+    <MESSAGE value="добавление картинки в файр базу" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление картинки в файр базу" />
   </component>
 </project>
