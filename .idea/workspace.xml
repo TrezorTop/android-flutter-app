@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b36b5eb-d861-4cde-af70-e69ad812f66e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/ProfilePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/ProfilePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/UploadPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/UploadPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/PostTileWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/PostTileWidget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/widgets/PostWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/PostWidget.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,14 +94,7 @@
       <option name="project" value="LOCAL" />
       <updated>1589838935926</updated>
     </task>
-    <task id="LOCAL-00005" summary="Посты в профиле">
-      <created>1589999303091</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1589999303091</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,7 +115,6 @@
     <MESSAGE value="Добавление фото" />
     <MESSAGE value="Добавить фото из Галереи и после создать с ним статью, написать типа описание к фото которое заливаешь и своё местоположение на фото" />
     <MESSAGE value="добавление картинки в файр базу" />
-    <MESSAGE value="Посты в профиле" />
-    <option name="LAST_COMMIT_MESSAGE" value="Посты в профиле" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавление картинки в файр базу" />
   </component>
 </project>
