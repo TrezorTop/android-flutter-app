@@ -1,6 +1,5 @@
 import 'package:buddiesgram/models/user.dart';
 import 'package:buddiesgram/pages/HomePage.dart';
-import 'package:buddiesgram/widgets/CImageWidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,7 @@ class Post extends StatefulWidget
 {
   final String postId;
   final String ownerId;
-  Map likes;
+  final dynamic likes;
   final String username;
   final String description;
   final String location;
