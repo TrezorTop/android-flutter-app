@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:buddiesgram/models/user.dart';
 import 'package:buddiesgram/pages/EditProfilePage.dart';
 import 'package:buddiesgram/pages/HomePage.dart';
@@ -242,12 +240,12 @@ class _ProfilePageState extends State<ProfilePage>
         IconButton(
           onPressed: ()=> setOrientation("grid"),
           icon: Icon(Icons.grid_on),
-          color: postOrientation == "grid" ? Theme.of(context).primaryColor : Colors.grey,
+          color: postOrientation == "grid" ? Theme.of(context).primaryColor : Colors.blue,
         ),
         IconButton(
           onPressed: ()=> setOrientation("list"),
           icon: Icon(Icons.list),
-          color: postOrientation == "list" ? Theme.of(context).primaryColor : Colors.grey,
+          color: postOrientation == "list" ? Theme.of(context).primaryColor : Colors.blue,
         ),
       ],
     );
