@@ -137,7 +137,7 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Us
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] C:\Users\Andrey\.gradle\caches\transforms-1\files-1.1\core-1.2.0.aar\7007e95dacdf04b0a6db4791ac04b169\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Android_Studio_Projects\buddies_gram\android\app\src\main\AndroidManifest.xml:11:9-37
+		ADDED from C:\Android_Studio_Projects\buddies_gram\android\app\src\main\AndroidManifest.xml:11:9-34
 	android:icon
 		ADDED from C:\Android_Studio_Projects\buddies_gram\android\app\src\main\AndroidManifest.xml:12:9-43
 	android:name
