@@ -4,10 +4,13 @@
     <list default="true" id="0b36b5eb-d861-4cde-af70-e69ad812f66e" name="Default Changelist" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.stamp" afterDir="false" />
+=======
+>>>>>>> parent of 0efd14f... Теперь можно ставить лайки, я бы проверил сам но у меня бляц почему то дальше 1 экрана не идёт
 =======
 >>>>>>> parent of 0efd14f... Теперь можно ставить лайки, я бы проверил сам но у меня бляц почему то дальше 1 экрана не идёт
 =======
