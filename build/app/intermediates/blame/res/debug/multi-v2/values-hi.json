@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Android_Studio_Projects\\buddies_gram\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
+            "outputFile": "C:\\Users\\BecausePunk\\Desktop\\EasyStudy\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-firebase-messaging-17.3.3.aar\\5d6a5a1bea58e51fe12df1d692f6b167\\res\\values-hi\\values.xml",
+                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-firebase-messaging-17.3.3.aar\\77effda211de7d390275829c008c025c\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.2.1.aar\\bad5f3f27129cf2b988f9d915aee8a4e\\res\\values-hi\\values.xml",
+                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-17.2.1.aar\\720985f338784b7a405420b769293474\\res\\values-hi\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "204",
+                        "endOffsets": "451"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1274",
+                        "endColumns": "204",
+                        "endOffsets": "1474"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.2.1.aar\\1f35b1876bd86783f91f5d3e00ec6a49\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\7007e95dacdf04b0a6db4791ac04b169\\res\\values-hi\\values-hi.xml",
+                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\723940ca6eb8f3e9c5353ab6ca52e714\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,23 +69,6 @@
                         "startOffsets": "2928",
                         "endColumns": "100",
                         "endOffsets": "3024"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-17.2.1.aar\\c8012dc62ec9137eb86540112e4df681\\res\\values-hi\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "204",
-                        "endOffsets": "451"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1274",
-                        "endColumns": "204",
-                        "endOffsets": "1474"
                     }
                 }
             ]

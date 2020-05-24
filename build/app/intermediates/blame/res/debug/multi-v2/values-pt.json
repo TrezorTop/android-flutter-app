@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Android_Studio_Projects\\buddies_gram\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
+            "outputFile": "C:\\Users\\BecausePunk\\Desktop\\EasyStudy\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\7007e95dacdf04b0a6db4791ac04b169\\res\\values-pt\\values-pt.xml",
+                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\723940ca6eb8f3e9c5353ab6ca52e714\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

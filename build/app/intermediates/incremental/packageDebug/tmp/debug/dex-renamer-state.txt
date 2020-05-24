@@ -1,10 +1,10 @@
-#Thu May 21 16:46:41 MSK 2020
+#Sat May 23 19:59:48 MSK 2020
 path.2=classes3.dex
 path.1=classes2.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=C\:\\Android_Studio_Projects\\buddies_gram\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
-base.1=C\:\\Android_Studio_Projects\\buddies_gram\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
-base.0=C\:\\Android_Studio_Projects\\buddies_gram\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+base.2=C\:\\Users\\BecausePunk\\Desktop\\EasyStudy\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+base.1=C\:\\Users\\BecausePunk\\Desktop\\EasyStudy\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+base.0=C\:\\Users\\BecausePunk\\Desktop\\EasyStudy\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
