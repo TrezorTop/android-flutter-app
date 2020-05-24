@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:html';
 
 import 'package:buddiesgram/models/user.dart';
 import 'package:buddiesgram/pages/HomePage.dart';
