@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\BecausePunk\\Desktop\\EasyStudy\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
+            "outputFile": "C:\\Android_Studio_Projects\\buddies_gram\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.2.1.aar\\1f35b1876bd86783f91f5d3e00ec6a49\\res\\values-tl\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,350,558,694,801,1018,1152,1300,1438,1676,1781,1990,2126,2347,2552,2646,2738",
-                        "endColumns": "104,207,135,106,216,133,147,137,237,104,208,135,220,204,93,91,105",
-                        "endOffsets": "349,557,693,800,1017,1151,1299,1437,1675,1780,1989,2125,2346,2551,2645,2737,2843"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,422,562,673,890,1028,1180,1526,1764,1873,2082,2222,2443,2652,2750,2846",
-                        "endColumns": "108,207,139,110,216,137,151,141,237,108,208,139,220,208,97,95,109",
-                        "endOffsets": "209,417,557,668,885,1023,1175,1317,1759,1868,2077,2217,2438,2647,2745,2841,2951"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-17.2.1.aar\\720985f338784b7a405420b769293474\\res\\values-tl\\values.xml",
+                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-17.2.1.aar\\c8012dc62ec9137eb86540112e4df681\\res\\values-tl\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\723940ca6eb8f3e9c5353ab6ca52e714\\res\\values-tl\\values-tl.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "21",
-                        "startColumns": "4",
-                        "startOffsets": "3061",
-                        "endColumns": "100",
-                        "endOffsets": "3157"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-firebase-messaging-17.3.3.aar\\77effda211de7d390275829c008c025c\\res\\values-tl\\values.xml",
+                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-firebase-messaging-17.3.3.aar\\5d6a5a1bea58e51fe12df1d692f6b167\\res\\values-tl\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -69,6 +35,40 @@
                         "startOffsets": "2956",
                         "endColumns": "104",
                         "endOffsets": "3056"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.2.1.aar\\bad5f3f27129cf2b988f9d915aee8a4e\\res\\values-tl\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,350,558,694,801,1018,1152,1300,1438,1676,1781,1990,2126,2347,2552,2646,2738",
+                        "endColumns": "104,207,135,106,216,133,147,137,237,104,208,135,220,204,93,91,105",
+                        "endOffsets": "349,557,693,800,1017,1151,1299,1437,1675,1780,1989,2125,2346,2551,2645,2737,2843"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,422,562,673,890,1028,1180,1526,1764,1873,2082,2222,2443,2652,2750,2846",
+                        "endColumns": "108,207,139,110,216,137,151,141,237,108,208,139,220,208,97,95,109",
+                        "endOffsets": "209,417,557,668,885,1023,1175,1317,1759,1868,2077,2217,2438,2647,2745,2841,2951"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.2.0.aar\\7007e95dacdf04b0a6db4791ac04b169\\res\\values-tl\\values-tl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "21",
+                        "startColumns": "4",
+                        "startOffsets": "3061",
+                        "endColumns": "100",
+                        "endOffsets": "3157"
                     }
                 }
             ]

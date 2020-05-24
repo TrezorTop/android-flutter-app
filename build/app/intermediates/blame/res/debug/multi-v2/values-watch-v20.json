@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\BecausePunk\\Desktop\\EasyStudy\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "C:\\Android_Studio_Projects\\buddies_gram\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BecausePunk\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-auth-16.0.1.aar\\eb38b4cd438d85a8453078e93bb8d0c1\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\Andrey\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-auth-16.0.1.aar\\018774b8c2ea8937e6b0ed173372f1e8\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
