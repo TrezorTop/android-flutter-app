@@ -27,9 +27,39 @@ class _ProfilePageState extends State<ProfilePage> {
   int countPost = 0;
   List<Post> postsList = [];
   String postOrientation = "grid";
-  
+  int countTotalFollowers = 0;
+  int countTotalFollowings = 0;
+  bool following = false;
+
   void initState(){
     getAllProfilePosts();
+    getAllFollowers();
+    getAllFollowings();
+    checkIfAlreadyFollowing();
+  }
+
+  getAllFollowings() async{
+    QuerySnapshot querySnapshot = await followingReference.document(widget.userProfileId).collection("userFollowing").getDocuments();
+
+    setState(() {
+      countTotalFollowings = querySnapshot.documents.length;
+    });
+  }
+
+  checkIfAlreadyFollowing() async{
+    DocumentSnapshot documentSnapshot = await followersReference.document(widget.userProfileId).collection("userFollowers").document(currentOnlineUserId).get();
+    
+    setState(() {
+      following = documentSnapshot.exists;
+    });
+  }
+
+  getAllFollowers() async{
+    QuerySnapshot querySnapshot = await followersReference.document(widget.userProfileId).collection("userFollowers").getDocuments();
+
+    setState(() {
+      countTotalFollowers = querySnapshot.documents.length;
+    });
   }
 
   createProfileTopView(){
@@ -58,9 +88,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            createColumns("posts", 0),
-                            createColumns("followers", 0),
-                            createColumns("following", 0),
+                            createColumns("posts", countPost),
+                            createColumns("followers", countTotalFollowers),
+                            createColumns("following", countTotalFollowings),
                           ],
                         ),
                         Row(
@@ -127,6 +157,55 @@ class _ProfilePageState extends State<ProfilePage> {
     if(ownProfile) {
       return createButtonTitleAndFunction(title: "Edit Profile", performFunction: editUserProfile,);
     }
+    else if(following) {
+      return createButtonTitleAndFunction(title: "Unfollow", performFunction: controlUnfollowUser,);
+    }
+    else if(!following) {
+      return createButtonTitleAndFunction(title: "Follow", performFunction: controlFollowUser,);
+    }
+  }
+
+  controlUnfollowUser(){
+    setState(() {
+      following = false;
+    });
+
+    followersReference.document(widget.userProfileId).collection("userFollowers").document(currentOnlineUserId).get().then((document){
+      if (document.exists){
+        document.reference.delete();
+      }
+    });
+
+    followingReference.document(currentOnlineUserId).collection("userFollowing").document(widget.userProfileId).get().then((document){
+      if (document.exists){
+        document.reference.delete();
+      }
+    });
+
+    activityFeedReference.document(widget.userProfileId).collection("feedItems").document(currentOnlineUserId).get().then((document){
+      if(document.exists){
+        document.reference.delete();
+      }
+    });
+  }
+
+  controlFollowUser(){
+    setState(() {
+      following = true;
+    });
+    
+    followersReference.document(widget.userProfileId).collection("userFollowers").document(currentOnlineUserId).setData({});
+
+    followingReference.document(currentOnlineUserId).collection("userFollowing").document(widget.userProfileId).setData({});
+    
+    activityFeedReference.document(widget.userProfileId).collection("feedItems").document(currentOnlineUserId).setData({
+      "type" : "follow",
+      "ownerId" : widget.userProfileId,
+      "username" : currentUser.username,
+      "timestamp" : DateTime.now(),
+      "userProfileImg" : currentUser.url,
+      "userId" : currentOnlineUserId,
+    });
   }
 
   Container createButtonTitleAndFunction({String title, Function performFunction}){
@@ -137,11 +216,11 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Container(
           width: 245.0,
           height: 26.0,
-          child: Text(title, style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),),
+          child: Text(title, style: TextStyle(color: following ? Colors.grey : Colors.white70, fontWeight: FontWeight.bold),),
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: Colors.black,
-            border: Border.all(color: Colors.grey),
+            color: following ? Colors.black : Colors.white70,
+            border: Border.all(color: following ? Colors.grey : Colors.white70),
             borderRadius: BorderRadius.circular(6.0),
           ),
         ),
