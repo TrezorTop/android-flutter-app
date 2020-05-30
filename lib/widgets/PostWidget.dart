@@ -166,7 +166,7 @@ class _PostState extends State<Post> {
 
     if(isNotPostOwner){
       activityFeedReference.document(ownerId).collection("feedItems").document(postId).setData({
-        "type": "like",
+        "type": "Like",
         "username": currentUser.username,
         "userId": currentUser.id,
         "timestamp": DateTime.now(),
