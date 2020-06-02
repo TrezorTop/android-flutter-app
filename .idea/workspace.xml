@@ -7,23 +7,17 @@
     <list default="true" id="0b36b5eb-d861-4cde-af70-e69ad812f66e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/eb0713efd94f2d6439fdc6991e80d599/kernel_snapshot.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/app.apk" afterDir="false" />
@@ -31,12 +25,7 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/HomePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/NotificationsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/NotificationsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/TimeLinePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/TimeLinePage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/PostWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/PostWidget.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,18 +45,22 @@
   </component>
   <component name="ProjectId" id="1bxVBGudnEcrYEwVjnuyvgIs71a" />
   <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/build/app/outputs/apk/release/app-release.apk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/app/outputs/apk/release/app-release.apk" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Android_Studio_Projects\buddies_gram\assets\fonts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Android_Studio_Projects\buddies_gram\android\app" />
       <recent name="C:\Android_Studio_Projects\buddies_gram\android\app\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Android_Studio_Projects\buddies_gram\assets\fonts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590872536998</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="все готово, остались правки и фиксы">
+      <created>1590959372316</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590959372316</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +196,7 @@
     <MESSAGE value="реализация комментариев, некст с 18" />
     <MESSAGE value="теперь можно подписываться, отображаются подписки, подписчики и можно лайкать и коменить посты, все работает&#10;&#10;Начинать с 19" />
     <MESSAGE value="firebase CLI" />
-    <option name="LAST_COMMIT_MESSAGE" value="firebase CLI" />
+    <MESSAGE value="все готово, остались правки и фиксы" />
+    <option name="LAST_COMMIT_MESSAGE" value="все готово, остались правки и фиксы" />
   </component>
 </project>
