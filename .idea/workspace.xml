@@ -15,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
@@ -25,7 +24,17 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/CommentsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/CommentsPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/CreateAccountPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/CreateAccountPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/EditProfilePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/EditProfilePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/HomePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/NotificationsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/NotificationsPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/ProfilePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/ProfilePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/SearchPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/SearchPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/UploadPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/UploadPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/PostWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/PostWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/ProgressWidget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/ProgressWidget.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590959372316</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="на случай отката">
+      <created>1591092789158</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1591092789158</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +213,7 @@
     <MESSAGE value="теперь можно подписываться, отображаются подписки, подписчики и можно лайкать и коменить посты, все работает&#10;&#10;Начинать с 19" />
     <MESSAGE value="firebase CLI" />
     <MESSAGE value="все готово, остались правки и фиксы" />
-    <option name="LAST_COMMIT_MESSAGE" value="все готово, остались правки и фиксы" />
+    <MESSAGE value="на случай отката" />
+    <option name="LAST_COMMIT_MESSAGE" value="на случай отката" />
   </component>
 </project>

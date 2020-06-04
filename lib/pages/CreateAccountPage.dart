@@ -18,7 +18,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
     if(form.validate()) {
       form.save();
 
-      SnackBar snackBar = SnackBar(content: Text("Welcome " + username));
+      SnackBar snackBar = SnackBar(content: Text("Добро пожаловать, " + username));
       _scaffoldKey.currentState.showSnackBar(snackBar);
       Timer(Duration(seconds: 4), (){
         Navigator.pop(context, username);
@@ -31,7 +31,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
   Widget build(BuildContext parentContext) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: header(context, strTitle: "Settings", disappearedBackButton: true),
+      appBar: header(context, strTitle: "Регистрация", disappearedBackButton: true),
       body: ListView(
         children: <Widget>[
           Container(
@@ -41,7 +41,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                   Padding(
                     padding: EdgeInsets.only(top: 26.0),
                     child: Center(
-                      child: Text("Set up a usernname", style: TextStyle(fontSize: 26.0),),
+                      child: Text("Укажите ваш логин, он будет виден всем пользователям", style: TextStyle(fontSize: 13.0),),
                     ),
                   ),
                   Padding(
@@ -51,13 +51,13 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                         key: _formKey ,
                         autovalidate: true,
                         child: TextFormField(
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.black),
                           validator: (val){
                             if(val.trim().length < 4 || val.isEmpty) {
-                              return "user name is too short";
+                              return "Логин слишком короткий";
                             }
                             else if (val.trim().length > 15) {
-                              return "user name is too long";
+                              return "Логин слишком длинный";
                             }
                             else {
                               return null;
@@ -69,12 +69,12 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                               borderSide: BorderSide(color: Colors.grey),
                             ),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
+                              borderSide: BorderSide(color: Colors.black),
                             ),
                             border: OutlineInputBorder(),
-                            labelText: "Username",
-                            labelStyle: TextStyle(fontSize: 16.0),
-                            hintText: "must be atleast 4 characters",
+                            labelText: "Логин",
+                            labelStyle: TextStyle(fontSize: 20.0),
+                            hintText: "Должно быть как минимум 4 символа",
                             hintStyle: TextStyle(color: Colors.grey),
                           ),
                         ),
@@ -87,15 +87,15 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                       height: 55.0,
                       width: 360.0,
                       decoration: BoxDecoration(
-                        color: Colors.lightGreenAccent,
+                        color: Colors.blueAccent,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Center(
                         child: Text(
-                          "Submit",
+                          "Продолжить",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16.0,
+                            fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

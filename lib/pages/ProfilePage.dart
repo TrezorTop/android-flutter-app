@@ -78,7 +78,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: <Widget>[
                   CircleAvatar(
                     radius: 40.0,
-                    backgroundColor: Colors.grey,
+                    backgroundColor: Colors.blue,
                     backgroundImage: CachedNetworkImageProvider(user.url),
                   ),
                   Expanded(
@@ -88,9 +88,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            createColumns("posts", countPost),
-                            createColumns("followers", countTotalFollowers),
-                            createColumns("following", countTotalFollowings),
+                            createColumns("посты", countPost),
+                            createColumns("подписчики", countTotalFollowers),
+                            createColumns("подписки", countTotalFollowings),
                           ],
                         ),
                         Row(
@@ -108,21 +108,21 @@ class _ProfilePageState extends State<ProfilePage> {
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.only(top: 13.0),
                 child: Text(
-                  user.username, style: TextStyle(fontSize: 14.0, color: Colors.white),
+                  user.username, style: TextStyle(fontSize: 14.0, color: Colors.black),
                 ),
               ),
               Container(
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.only(top: 5.0),
                 child: Text(
-                  user.profileName, style: TextStyle(fontSize: 18.0, color: Colors.white),
+                  user.profileName, style: TextStyle(fontSize: 18.0, color: Colors.black),
                 ),
               ),
               Container(
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.only(top: 3.0),
                 child: Text(
-                  user.bio, style: TextStyle(fontSize: 18.0, color: Colors.white70),
+                  user.bio, style: TextStyle(fontSize: 18.0, color: Colors.black),
                 ),
               ),
             ],
@@ -139,13 +139,13 @@ class _ProfilePageState extends State<ProfilePage> {
       children: <Widget>[
         Text(
           count.toString(),
-          style: TextStyle(fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 20.0, color: Colors.blueAccent, fontWeight: FontWeight.bold),
         ),
         Container(
           margin: EdgeInsets.only(top: 5.0),
           child: Text(
             title,
-            style: TextStyle(fontSize: 16.0, color: Colors.grey, fontWeight: FontWeight.w300),
+            style: TextStyle(fontSize: 16.0, color: Colors.black, fontWeight: FontWeight.w300),
           ),
         )
       ],
@@ -155,13 +155,13 @@ class _ProfilePageState extends State<ProfilePage> {
   createButton(){
     bool ownProfile = currentOnlineUserId == widget.userProfileId;
     if(ownProfile) {
-      return createButtonTitleAndFunction(title: "Edit Profile", performFunction: editUserProfile,);
+      return createButtonTitleAndFunction(title: "Редактировать профиль", performFunction: editUserProfile,);
     }
     else if(following) {
-      return createButtonTitleAndFunction(title: "Unfollow", performFunction: controlUnfollowUser,);
+      return createButtonTitleAndFunction(title: "Отписаться", performFunction: controlUnfollowUser,);
     }
     else if(!following) {
-      return createButtonTitleAndFunction(title: "Follow", performFunction: controlFollowUser,);
+      return createButtonTitleAndFunction(title: "Подписаться", performFunction: controlFollowUser,);
     }
   }
 
@@ -216,11 +216,11 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Container(
           width: 245.0,
           height: 26.0,
-          child: Text(title, style: TextStyle(color: following ? Colors.grey : Colors.white70, fontWeight: FontWeight.bold),),
+          child: Text(title, style: TextStyle(color: following ? Colors.white : Colors.blueAccent, fontWeight: FontWeight.bold),),
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: following ? Colors.black : Colors.white70,
-            border: Border.all(color: following ? Colors.grey : Colors.white70),
+            color: following ? Colors.blueAccent : Colors.white,
+            border: Border.all(color: following ? Colors.blueAccent : Colors.blueAccent),
             borderRadius: BorderRadius.circular(6.0),
           ),
         ),
@@ -236,13 +236,19 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: header(context, strTitle: "Profile",),
+      appBar: header(context, strTitle: "Профиль",),
       body: ListView(
         children: <Widget>[
           createProfileTopView(),
-          Divider(),
+          Divider(
+            color: Colors.blueAccent,
+            thickness: 1.5,
+          ),
           createListAndGridPostOrientation(),
-          Divider(height: 0.0,),
+          Divider(
+            color: Colors.blueAccent,
+            thickness: 1.5,
+          ),
           displayProfilePost(),
         ],
       ),
@@ -260,11 +266,11 @@ class _ProfilePageState extends State<ProfilePage> {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.all(30.0),
-              child: Icon(Icons.photo_library, color: Colors.grey, size: 200.0,),
+              child: Icon(Icons.photo_library, color: Colors.blueAccent, size: 200.0,),
             ),
             Padding(
               padding: EdgeInsets.only(top: 20.0),
-              child: Text("No Posts", style: TextStyle(color: Colors.redAccent, fontSize: 40.0, fontWeight: FontWeight.bold),),
+              child: Text("Здесь пока ничего нет", style: TextStyle(color: Colors.blueAccent, fontSize: 30.0, fontWeight: FontWeight.bold),),
             ),
           ],
         ),

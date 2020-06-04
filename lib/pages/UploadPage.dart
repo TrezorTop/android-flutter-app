@@ -28,8 +28,10 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
   File file;
   bool uploading = false;
   String postId = Uuid().v4();
+  TextEditingController titleTextEditingController = TextEditingController();
   TextEditingController descriptionTextEditingController = TextEditingController();
   TextEditingController locationTextEditingController = TextEditingController();
+  TextEditingController contactTextEditingController = TextEditingController();
 
 
   captureImageWithCamera() async {
@@ -59,18 +61,18 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
         context: mContext,
       builder: (context){
           return SimpleDialog(
-            title: Text("New Post", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+            title: Text("Новый пост", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
             children: <Widget>[
               SimpleDialogOption(
-                child: Text("Capture Image with Camera", style: TextStyle(color: Colors.white,),),
+                child: Text("Сделать фото", style: TextStyle(color: Colors.white,),),
                 onPressed: captureImageWithCamera,
               ),
               SimpleDialogOption(
-                child: Text("Select Image from Gallery", style: TextStyle(color: Colors.white,),),
+                child: Text("Выбрать фото из галереи", style: TextStyle(color: Colors.white,),),
                 onPressed: pickImageFromGallery,
               ),
               SimpleDialogOption(
-                child: Text("Cancel", style: TextStyle(color: Colors.white,),),
+                child: Text("Отмена", style: TextStyle(color: Colors.white,),),
                 onPressed: () => Navigator.pop(context),
            ),
           ],
@@ -87,14 +89,14 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Icon(Icons.add_photo_alternate, color: Colors.grey, size: 200.0,),
+          Icon(Icons.add_to_photos, color: Colors.white, size: 200.0,),
           Padding(
             padding: EdgeInsets.only(top: 20.0),
             child: RaisedButton(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9.0),),
-              child: Text("Upload", style: TextStyle(color: Colors.white, fontSize: 20.0),),
-              color: Colors.purple,
-              onPressed: () => takeImage(context)
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9.0),),
+                child: Text("Загрузить", style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                color: Colors.blueAccent,
+                onPressed: () => takeImage(context)
             ),
           ),
         ],
@@ -104,8 +106,10 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
 
   clearPostInfo()
   {
-    locationTextEditingController.clear();
+    titleTextEditingController.clear();
     descriptionTextEditingController.clear();
+    locationTextEditingController.clear();
+    contactTextEditingController.clear();
 
     setState(() {
       file = null;
@@ -113,14 +117,14 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
   }
 
 
-  getUserCurrentLocation() async {
-    Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-    List<Placemark> placeMarks = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
-    Placemark mPlaceMark = placeMarks[0];
-    String completeAddressInfo = '${mPlaceMark.subThoroughfare}, ${mPlaceMark.thoroughfare}, ${mPlaceMark.subLocality}, ${mPlaceMark.locality}, ${mPlaceMark.subAdministrativeArea}, ${mPlaceMark.administrativeArea}, ${mPlaceMark.postalCode}, ${mPlaceMark.country}';
-    String specificAddress = '${mPlaceMark.locality}, ${mPlaceMark.country}';
-    locationTextEditingController.text = specificAddress;
-  }
+//  getUserCurrentLocation() async {
+//    Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+//    List<Placemark> placeMarks = await Geolocator().placemarkFromCoordinates(position.latitude, position.longitude);
+//    Placemark mPlaceMark = placeMarks[0];
+//    String completeAddressInfo = '${mPlaceMark.subThoroughfare}, ${mPlaceMark.thoroughfare}, ${mPlaceMark.subLocality}, ${mPlaceMark.locality}, ${mPlaceMark.subAdministrativeArea}, ${mPlaceMark.administrativeArea}, ${mPlaceMark.postalCode}, ${mPlaceMark.country}';
+//    String specificAddress = '${mPlaceMark.locality}, ${mPlaceMark.country}';
+//    locationTextEditingController.text = specificAddress;
+//  }
 
   compressingPhoto() async {
     final tDirectory = await getTemporaryDirectory();
@@ -141,10 +145,12 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
 
     String downloadUrl = await uploadPhoto(file);
 
-    savePostInfoToFireStorm(url: downloadUrl, location: locationTextEditingController.text, description: descriptionTextEditingController.text);
+    savePostInfoToFireStorm(url: downloadUrl, title: titleTextEditingController.text, description: descriptionTextEditingController.text, location: locationTextEditingController.text, contact: contactTextEditingController.text);
 
-    locationTextEditingController.clear();
+    titleTextEditingController.clear();
     descriptionTextEditingController.clear();
+    locationTextEditingController.clear();
+    contactTextEditingController.clear();
 
     setState(() {
       file = null;
@@ -154,7 +160,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
   }
 
 
-  savePostInfoToFireStorm({String url, String location, String description})
+  savePostInfoToFireStorm({String url, String title, String description, String location, String contact})
   {
     postsReference.document(widget.gCurrentUser.id).collection("usersPosts").document(postId).setData({
       "postId": postId,
@@ -162,8 +168,10 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
       "timestamp": DateTime.now(),
       "likes": {},
       "username": widget.gCurrentUser.username,
+      "title": title,
       "description": description,
       "location": location,
+      "contact": contact,
       "url": url,
     });
   }
@@ -180,11 +188,11 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
       appBar: AppBar(
         backgroundColor: Colors.blue,
         leading: IconButton(icon: Icon(Icons.arrow_back, color: Colors.white,), onPressed: clearPostInfo),
-        title: Text("New Post", style: TextStyle(fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.bold),),
+        title: Text("Новый пост", style: TextStyle(fontSize: 24.0, color: Colors.white, fontWeight: FontWeight.bold),),
         actions: <Widget>[
           FlatButton(
             onPressed: uploading ? null : () => controlUploadAndSave(),
-            child: Text("Share", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16.0),),
+            child: Text("Опубликовать", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16.0),),
           )
         ],
       ),
@@ -209,44 +217,88 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
             title: Container(
               width: 250.0,
               child: TextField(
-                style: TextStyle(color: Colors.white),
-                controller: descriptionTextEditingController,
+                style: TextStyle(color: Colors.black),
+                controller: titleTextEditingController,
                 decoration: InputDecoration(
-                  hintText: "Say somathing about image.",
-                  hintStyle: TextStyle(color: Colors.white),
+                  hintText: "Заголовок",
+                  hintStyle: TextStyle(color: Colors.blueGrey),
                   border: InputBorder.none,
                 ),
               ),
             ),
           ),
-          Divider(),
+          Divider(
+            color: Colors.blue,
+            thickness: 2,
+          ),
           ListTile(
-            leading: Icon(Icons.person_pin_circle, color: Colors.white, size: 36.0,),
+            leading: Icon(Icons.description, color: Colors.blueAccent, size: 36.0,),
             title: Container(
               width: 250.0,
               child: TextField(
-                style: TextStyle(color: Colors.white),
-                controller: locationTextEditingController,
+                style: TextStyle(color: Colors.black),
+                controller: descriptionTextEditingController,
                 decoration: InputDecoration(
-                  hintText: "Write the location here.",
-                  hintStyle: TextStyle(color: Colors.white),
+                  hintText: "Описание.",
+                  hintStyle: TextStyle(color: Colors.blueGrey),
                   border: InputBorder.none,
+
                 ),
               ),
             ),
           ),
-          Container(
-            width: 220.0,
-            height: 110.0,
-            alignment: Alignment.center,
-            child: RaisedButton.icon(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(35.0)),
-              color: Colors.purple,
-              icon: Icon(Icons.location_on, color: Colors.white,),
-              label: Text("Get my Current Location", style: TextStyle(color: Colors.white),),
-              onPressed: getUserCurrentLocation,
+          Divider(
+            color: Colors.blue,
+            thickness: 2,
+          ),
+          ListTile(
+            leading: Icon(Icons.place, color: Colors.blueAccent, size: 36.0,),
+            title: Container(
+              width: 250.0,
+              child: TextField(
+                style: TextStyle(color: Colors.black),
+                controller: locationTextEditingController,
+                decoration: InputDecoration(
+                  hintText: "Место проведения/площадка.",
+                  hintStyle: TextStyle(color: Colors.blueGrey),
+                  border: InputBorder.none,
+
+                ),
+              ),
             ),
           ),
+          Divider(
+            color: Colors.blue,
+            thickness: 2,
+          ),
+          ListTile(
+            leading: Icon(Icons.contact_mail, color: Colors.blueAccent, size: 36.0,),
+            title: Container(
+              width: 250.0,
+              child: TextField(
+                style: TextStyle(color: Colors.black),
+                controller: contactTextEditingController,
+                decoration: InputDecoration(
+                  hintText: "Ваши контакты для связи.",
+                  hintStyle: TextStyle(color: Colors.blueGrey),
+                  border: InputBorder.none,
+
+                ),
+              ),
+            ),
+          ),
+//          Container(
+//            width: 220.0,
+//            height: 110.0,
+//            alignment: Alignment.center,
+//            child: RaisedButton.icon(
+//              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(35.0)),
+//              color: Colors.blueAccent,
+//              icon: Icon(Icons.location_on, color: Colors.white,),
+//              label: Text("Get my Current Location", style: TextStyle(color: Colors.white),),
+//              onPressed: getUserCurrentLocation,
+//            ),
+//          ),
         ],
       ),
     );

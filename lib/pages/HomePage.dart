@@ -179,13 +179,13 @@ class _HomePageState extends State<HomePage> {
         currentIndex: getPageIndex,
         onTap: onTapChangePage,
         backgroundColor: Theme.of(context).accentColor,
-        activeColor: Colors.white,
-        inactiveColor: Colors.blue,
+        activeColor: Colors.cyanAccent,
+        inactiveColor: Colors.white,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home)),
           BottomNavigationBarItem(icon: Icon(Icons.search)),
-          BottomNavigationBarItem(icon: Icon(Icons.photo_camera, size: 37.0,)),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite)),
+          BottomNavigationBarItem(icon: Icon(Icons.add_comment, size: 37.0,)),
+          BottomNavigationBarItem(icon: Icon(Icons.notification_important)),
           BottomNavigationBarItem(icon: Icon(Icons.person)),
         ],
       ),
@@ -214,8 +214,8 @@ class _HomePageState extends State<HomePage> {
             GestureDetector(
               onTap: loginUser,
               child: Container(
-                width: 270.0,
-                height: 65.0,
+                width: 310.0,
+                height: 80.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("assets/images/google_signin_button.png"),

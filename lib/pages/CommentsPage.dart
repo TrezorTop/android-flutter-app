@@ -73,7 +73,7 @@ class CommentsPageState extends State<CommentsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: header(context, strTitle: "Comments"),
+      appBar: header(context, strTitle: "Комментарии"),
       body: Column(
         children: <Widget>[
           Expanded(child: retrieveComments()),
@@ -82,17 +82,17 @@ class CommentsPageState extends State<CommentsPage> {
             title: TextFormField(
               controller: commentTextEditingController,
               decoration: InputDecoration(
-                labelText: "Write comment here",
-                labelStyle: TextStyle(color: Colors.white),
-                enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-                focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                labelText: "Ваш комментарий",
+                labelStyle: TextStyle(color: Colors.blueAccent),
+                enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+                focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.black)),
               ),
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
             ),
             trailing: OutlineButton(
               onPressed: saveComment,
               borderSide: BorderSide.none,
-              child: Text("Publish", style: TextStyle(color: Colors.lightGreenAccent, fontWeight: FontWeight.bold),),
+              child: Text("Отправить", style: TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold),),
             ),
           )
         ],
@@ -125,15 +125,15 @@ class Comment extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(bottom: 6.0),
       child: Container(
-        color: Colors.white,
+        color: Colors.blueAccent,
         child: Column(
           children: <Widget>[
             ListTile(
-              title: Text(username + ": " + comment, style: TextStyle(fontSize: 18.0, color: Colors.black),),
+              title: Text(username + ": " + comment, style: TextStyle(fontSize: 18.0, color: Colors.white),),
               leading: CircleAvatar(
                 backgroundImage: CachedNetworkImageProvider(url),
               ),
-              subtitle: Text(tAgo.format(timestamp.toDate()), style: TextStyle(color: Colors.black),),
+              subtitle: Text(tAgo.format(timestamp.toDate()), style: TextStyle(color: Colors.white),),
             ),
           ],
         ),

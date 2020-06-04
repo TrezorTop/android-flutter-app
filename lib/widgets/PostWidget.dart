@@ -16,8 +16,10 @@ class Post extends StatefulWidget {
   final String ownerId;
   final dynamic likes;
   final String username;
+  final String title;
   final String description;
   final String location;
+  final String contact;
   final String url;
 
   Post({
@@ -25,8 +27,10 @@ class Post extends StatefulWidget {
     this.ownerId,
     this.likes,
     this.username,
+    this.title,
     this.description,
     this.location,
+    this.contact,
     this.url,
   });
 
@@ -36,8 +40,10 @@ class Post extends StatefulWidget {
       ownerId: documentSnapshot["ownerId"],
       likes: documentSnapshot["likes"],
       username: documentSnapshot["username"],
+      title: documentSnapshot["title"],
       description: documentSnapshot["description"],
       location: documentSnapshot["location"],
+      contact: documentSnapshot["contact"],
       url: documentSnapshot["url"],
     );
   }
@@ -62,8 +68,10 @@ class Post extends StatefulWidget {
     ownerId: this.ownerId,
     likes: this.likes,
     username: this.username,
+    title: this.title,
     description: this.description,
     location: this.location,
+    contact: this.contact,
     url: this.url,
     likeCount: getTotalNumberOfLikes(this.likes),
   );
@@ -77,8 +85,10 @@ class _PostState extends State<Post> {
   final String ownerId;
   Map likes;
   final String username;
+  final String title;
   final String description;
   final String location;
+  final String contact;
   final String url;
   int likeCount;
   bool isLiked;
@@ -90,8 +100,10 @@ class _PostState extends State<Post> {
     this.ownerId,
     this.likes,
     this.username,
+    this.title,
     this.description,
     this.location,
+    this.contact,
     this.url,
     this.likeCount
   });
@@ -131,12 +143,12 @@ class _PostState extends State<Post> {
             onTap: ()=> displayUserProfile(context, userProfileId: user.id),
             child: Text(
               user.username,
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
           ),
-          subtitle: Text(location, style: TextStyle(color: Colors.white),),
+          subtitle: Text(title, style: TextStyle(color: Colors.black),),
           trailing: isPostOwner ? IconButton(
-            icon: Icon(Icons.more_vert, color: Colors.white,),
+            icon: Icon(Icons.more_vert, color: Colors.black,),
             onPressed: () => controlPostDelete(context),
           ) : Text(""),
         );
@@ -199,32 +211,32 @@ class _PostState extends State<Post> {
   }
 
 
-  removeLike(){
-    bool isNotPostOwner = currentOnlineUserId != ownerId;
-
-    if(isNotPostOwner){
-      activityFeedReference.document(ownerId).collection("feedItems").document(postId).get().then((document){
-        if(document.exists){
-          document.reference.delete();
-        }
-      });
-    }
-  }
+//  removeLike(){
+//    bool isNotPostOwner = currentOnlineUserId != ownerId;
+//
+//    if(isNotPostOwner){
+//      activityFeedReference.document(ownerId).collection("feedItems").document(postId).get().then((document){
+//        if(document.exists){
+//          document.reference.delete();
+//        }
+//      });
+//    }
+//  }
 
   addLike(){
     bool isNotPostOwner = currentOnlineUserId != ownerId;
 
-    if(isNotPostOwner){
-      activityFeedReference.document(ownerId).collection("feedItems").document(postId).setData({
-        "type": "like",
-        "username": currentUser.username,
-        "userId": currentUser.id,
-        "timestamp": DateTime.now(),
-        "url": url,
-        "postId": postId,
-        "userProfileImage": currentUser.url,
-      });
-    }
+//    if(isNotPostOwner){
+//      activityFeedReference.document(ownerId).collection("feedItems").document(postId).setData({
+//        "type": "like",
+//        "username": currentUser.username,
+//        "userId": currentUser.id,
+//        "timestamp": DateTime.now(),
+//        "url": url,
+//        "postId": postId,
+//        "userProfileImage": currentUser.url,
+//      });
+//    }
   }
 
   controlUserLikePost(){
@@ -233,7 +245,7 @@ class _PostState extends State<Post> {
    if(_liked){
      postsReference.document(ownerId).collection("usersPosts").document(postId).updateData({"likes.$currentOnlineUserId": false});
 
-     removeLike();
+//     removeLike();
 
      setState(() {
        likeCount = likeCount - 1;
@@ -267,7 +279,7 @@ class _PostState extends State<Post> {
         alignment: Alignment.center,
         children: <Widget>[
           Image.network(url),
-          showHeart ? Icon(Icons.favorite, size: 140.0, color: Colors.pink,) : Text(""),
+          showHeart ? Icon(Icons.favorite, size: 140.0, color: Colors.blueAccent,) : Text(""),
         ],
       ),
     );
@@ -285,13 +297,13 @@ class _PostState extends State<Post> {
               child: Icon(
                 isLiked ? Icons.favorite : Icons.favorite_border,
                 size: 28.0,
-                color: Colors.pink,
+                color: Colors.blueAccent,
               ),
             ),
             Padding(padding: EdgeInsets.only(right: 20.0),),
             GestureDetector(
               onTap: ()=> displayComments(context, postId: postId, ownerId: ownerId, url: url),
-              child: Icon(Icons.chat_bubble_outline, size: 28.0, color: Colors.white,),
+              child: Icon(Icons.chat_bubble_outline, size: 28.0, color: Colors.blueAccent,),
             ),
           ],
         ),
@@ -301,7 +313,7 @@ class _PostState extends State<Post> {
               margin: EdgeInsets.only(left: 20.0),
               child: Text(
                 "$likeCount likes",
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold),
               ),
             )
           ],
@@ -311,11 +323,35 @@ class _PostState extends State<Post> {
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(left: 20.0),
-              child: Text("$username  ", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+              child: Text(description, style: TextStyle(color: Colors.black ),),
             ),
-            Expanded(
-              child: Text(description, style: TextStyle(color: Colors.white ),),
+//            Expanded(
+//              child: Text(description, style: TextStyle(color: Colors.black ),),
+//            ),
+          ],
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(left: 20.0),
+              child: Text(location, style: TextStyle(color: Colors.black ),),
             ),
+//            Expanded(
+//              child: Text(description, style: TextStyle(color: Colors.black ),),
+//            ),
+          ],
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(left: 20.0),
+              child: Text(contact, style: TextStyle(color: Colors.black ),),
+            ),
+//            Expanded(
+//              child: Text(description, style: TextStyle(color: Colors.black ),),
+//            ),
           ],
         ),
       ],

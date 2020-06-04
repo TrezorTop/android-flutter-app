@@ -110,35 +110,35 @@ class NotificationsItem extends StatelessWidget {
   }
 
   configureMediaPreview(context){
-    if(type == "comment" || type == "like"){
-      mediaPreview = GestureDetector(
-        onTap: ()=> displayOwnProfile(context, userProfileId: currentUser.id),
-        child: Container(
-          height: 50.0,
-          width: 50.0,
-          child: AspectRatio(
-            aspectRatio: 16/9,
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(fit: BoxFit.cover, image: CachedNetworkImageProvider(url)),
-              ),
-            ),
-          ),
-        ),
-      );
-    }
-    else{
-      mediaPreview = Text("");
-    }
+//    if(type == "comment" || type == "like"){
+//      mediaPreview = GestureDetector(
+//        onTap: ()=> displayOwnProfile(context, userProfileId: currentUser.id),
+//        child: Container(
+//          height: 50.0,
+//          width: 50.0,
+//          child: AspectRatio(
+//            aspectRatio: 16/9,
+//            child: Container(
+//              decoration: BoxDecoration(
+//                image: DecorationImage(fit: BoxFit.cover, image: CachedNetworkImageProvider(url)),
+//              ),
+//            ),
+//          ),
+//        ),
+//      );
+//    }
+//    else{
+//      mediaPreview = Text("");
+//    }
 
     if(type == "like"){
       notificationItemText = "оценил/а ваш пост.";
     }
     else if(type == 'comment'){
-      notificationItemText = "написал/а комментарий под вашим постом: $commentData";
+      notificationItemText = "прокоментировал/а ваш пост: $commentData";
     }
     else if(type == "follow"){
-      notificationItemText = "начал/а следить за вами";
+      notificationItemText = "подписался/сь на вас";
     }
     else {
       notificationItemText = "Ошибка, передан тип: $type";

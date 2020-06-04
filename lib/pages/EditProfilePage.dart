@@ -61,7 +61,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
         "profileName": profileNameTextEditingController.text,
         "bio": bioTextEditingController.text,
       });
-      SnackBar successSnackBar = SnackBar(content: Text("Profile has been updated successfully."));
+      SnackBar successSnackBar = SnackBar(content: Text("Профиль успешно отредактирован"));
       _scaffoldGlobalKey.currentState.showSnackBar(successSnackBar);
     }
   }
@@ -72,9 +72,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
     return Scaffold(
       key: _scaffoldGlobalKey,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         iconTheme: IconThemeData(color: Colors.white),
-        title: Text("Edit Profile", style: TextStyle(color: Colors.white),),
+        title: Text("Редактирование профиля", style: TextStyle(color: Colors.white),),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.done, color: Colors.white, size: 30.0,), onPressed: ()=> Navigator.pop(context),),
         ],
@@ -100,7 +100,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   child: RaisedButton(
                     onPressed: updateUserData,
                     child: Text(
-                      "Update",
+                      "Обновить профиль",
                       style: TextStyle(color: Colors.black, fontSize: 16.0),
                     ),
                   ),
@@ -111,7 +111,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     color: Colors.red,
                     onPressed: logoutUser,
                     child: Text(
-                      "Logout",
+                      "Выйти из аккаунта",
                       style: TextStyle(color: Colors.white, fontSize: 14.0),
                     ),
                   ),
@@ -136,23 +136,23 @@ class _EditProfilePageState extends State<EditProfilePage> {
         Padding(
           padding: EdgeInsets.only(top: 13.0),
           child: Text(
-            "Profile Name", style: TextStyle(color: Colors.grey),
+            "Имя профиля", style: TextStyle(color: Colors.blueAccent),
           ),
         ),
         TextField(
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
 
           controller: profileNameTextEditingController,
           decoration: InputDecoration(
-            hintText: "Write profile name here...",
+            hintText: "Введите имя профиля здесь",
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.grey),
             ),
             focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
+              borderSide: BorderSide(color: Colors.blueAccent),
             ),
             hintStyle: TextStyle(color: Colors.grey),
-            errorText: _profileNameValid ? null : "Profile name is too short",
+            errorText: _profileNameValid ? null : "Данное поле обязательно к заполнению",
           ),
         ),
       ],
@@ -166,7 +166,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
         Padding(
           padding: EdgeInsets.only(top: 13.0),
           child: Text(
-            "Bio", style: TextStyle(color: Colors.grey),
+            "Описание профиля", style: TextStyle(color: Colors.blueAccent),
           ),
         ),
         TextField(
@@ -174,15 +174,14 @@ class _EditProfilePageState extends State<EditProfilePage> {
 
           controller: bioTextEditingController,
           decoration: InputDecoration(
-            hintText: "Write Bio here...",
+            hintText: "Расскажите немного о себе",
             enabledBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.grey),
             ),
             focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
+              borderSide: BorderSide(color: Colors.blueAccent),
             ),
             hintStyle: TextStyle(color: Colors.grey),
-            errorText: _profileNameValid ? null : "Bio is too short",
           ),
         ),
       ],

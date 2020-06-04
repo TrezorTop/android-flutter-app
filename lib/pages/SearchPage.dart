@@ -8,6 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+
 import 'ProfilePage.dart';
 
 class SearchPage extends StatefulWidget {
@@ -41,10 +42,10 @@ class _SearchPageState extends State<SearchPage> with AutomaticKeepAliveClientMi
         style: TextStyle(fontSize: 18.0, color: Colors.white),
         controller: searchTextEditingController,
         decoration: InputDecoration(
-          hintText: "Search here....",
-          hintStyle: TextStyle(color: Colors.grey),
+          hintText: "Поиск",
+          hintStyle: TextStyle(color: Colors.white),
           enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: Colors.grey)
+            borderSide: BorderSide(color: Colors.white)
           ),
             focusedBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: Colors.white)
@@ -60,17 +61,17 @@ class _SearchPageState extends State<SearchPage> with AutomaticKeepAliveClientMi
 
 
   Container displayNoSearchResultScreen(){
-    final Orientation = MediaQuery.of(context).orientation;
+//    final orientation = MediaQuery.of(context).orientation;
     return Container(
       child: Center(
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            Icon(Icons.group, color: Colors.grey, size: 200.0,),
+            Icon(Icons.group, color: Colors.blueAccent, size: 200.0,),
             Text(
-              "Search Users",
+              "Поиск пользователей",
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 65.0),
+              style: TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w500, fontSize: 30.0),
             ),
           ],
         ),
@@ -106,7 +107,7 @@ class _SearchPageState extends State<SearchPage> with AutomaticKeepAliveClientMi
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Colors.blue,
+       backgroundColor: Colors.white,
        appBar: searchPageHeader(),
       body: futureSearchResults == null ? displayNoSearchResultScreen() : displayUsersFoundScreen(),
     );
@@ -126,7 +127,7 @@ class UserResult extends StatelessWidget
     return Padding(
       padding: EdgeInsets.all(3.0),
       child: Container(
-        color: Colors.white54,
+        color: Colors.white,
         child: Column(
           children: <Widget>[
             GestureDetector(
@@ -143,7 +144,7 @@ class UserResult extends StatelessWidget
             )
           ],
         ),
-      )
+      ),
     );
   }
 
