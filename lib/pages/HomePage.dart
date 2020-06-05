@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   onTapChangePage(int pageIndex){
-    pageController.animateToPage(pageIndex, duration: Duration(milliseconds: 400), curve: Curves.bounceInOut,);
+    pageController.animateToPage(pageIndex, duration: Duration(milliseconds: 400), curve: Curves.ease,);
   }
 
   Scaffold buildHomeScreen() {
